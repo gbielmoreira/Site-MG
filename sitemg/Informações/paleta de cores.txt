@@ -1,0 +1,5 @@
+#19BF00 //verde claro
+#1E8009 //verde escuro
+#FFBD00 //laranja
+#0D7B80 //azul
+#800662 //roxo
