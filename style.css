@@ -491,7 +491,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 
 
 
-/*Venha ser MG*/
+/*Venha ser MG
 #eventos{
     background-color: #ff8247;
     display: flex;
@@ -519,7 +519,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 #eventos{ 
     flex-direction: column;
 }
-}
+}*/
 
 
 
