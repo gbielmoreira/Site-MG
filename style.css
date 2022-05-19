@@ -387,35 +387,51 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 #cursos h2{
     font-size: 1.8em;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 #cursos p{
     text-indent: 30px;
     text-align: justify;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 23px;
+    padding: 15px;
+    line-height: 20px;
 }
 #cursos img{
-    max-width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 50%;
     align-items: center;
     border-radius: 10px;
 }
 #cursos a{
+    display: flex;
+    justify-content: flex-end;
     color: black;
     font-style: italic;
-    text-align: right;
-    
 }
 .card{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.308);
     padding: 25px;
     max-width: 350px;
-    height: 550px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.ctb:hover{
+
+    box-shadow: 7px 8px 0px 0px rgba(255,178,236,0.81);
+}
+
+.info:hover{
+     
+    box-shadow: 7px 8px 0px 0px rgba(204,222,255,0.81);
+}
+
+.mult:hover{
+    box-shadow: 7px 8px 0px 0px rgba(183,125,255,0.81);
+}
+
 #cursos section{
     display: flex;
     padding-bottom: 25px;
@@ -433,7 +449,6 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     max-width: 350px;
 }
 }
-
 
 /*Documentações*/
 #documentacao{
@@ -491,7 +506,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 
 
 
-/*Venha ser MG
+/*Venha ser MG*/
 #eventos{
     background-color: #ff8247;
     display: flex;
@@ -519,7 +534,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 #eventos{ 
     flex-direction: column;
 }
-}*/
+}
 
 
 
