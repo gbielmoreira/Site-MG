@@ -5,9 +5,7 @@
     font-family: "Poppins", Helvetica, sans-serif;
 }
 
-body {
-    overflow-x: hidden;
-}
+
 
 /*header*/
 header{
@@ -52,19 +50,15 @@ nav {
     list-style: none;
     display: flex;
 }
-
 .nav-list li {
     letter-spacing: 3px;
     margin-left: 37px;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.363);
 }
-
 .mobile-menu {
     display: none;
     cursor: pointer;
 }
-
-
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -73,8 +67,10 @@ nav {
     transition: 0.3s;
 }
 
-@media (max-width: 950px) {
-
+@media (max-width: 1000px) {
+body {
+    overflow-x: hidden;
+}
 nav{
     top: 0;
     width: 100%;
@@ -97,12 +93,10 @@ nav{
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    
 }
 .nav-list li {
     margin-left: 0;
     opacity: 0;
-    
 }
 .logo{
     font-size: 1.3em;
@@ -419,12 +413,10 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 
 .ctb:hover{
-
     box-shadow: 7px 8px 0px 0px rgba(255,178,236,0.81);
 }
 
 .info:hover{
-     
     box-shadow: 7px 8px 0px 0px rgba(204,222,255,0.81);
 }
 
@@ -505,10 +497,11 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 
 
-
 /*Venha ser MG*/
-#eventos{
+#eventos section{
     background-color: #ff8247;
+    height: 300px;
+    padding: 30px;
     display: flex;
     position: relative;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.322);
@@ -518,24 +511,58 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     font-size: 5em;
     color: white;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    padding: 70px 90px;
+    padding-top: 30px;
+    padding-left: 60px;
 }
 .imagens-eventos{
     display: flex;
     position: absolute;
-    right: 50px;
+    right: 20px;
 }
 .imagens-eventos img{
-    margin: 40px 20px;
+    margin-right: 20px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.322);
+    max-width: 100%;
 }
-
-@media screen and (max-width:1500px){
-#eventos{ 
+@media screen and (max-width:1560px){
+#eventos section{
+   display: block;
+   height: 620px;
+}
+#eventos h1{
+    font-size: 5em;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+.imagens-eventos{
+    position: static;
+    justify-content: center;
+}
+}
+@media screen and (max-width:1080px){
+#eventos section{
+    height: 900px;
+}
+.imagens-eventos{
     flex-direction: column;
+    margin: auto;
+    display: block;
 }
 }
-
+@media screen and (max-width:500px){
+#eventos h1{
+    font-size: 4em;
+}
+#eventos section{
+    height: 750px;
+}
+}
+@media screen and (max-width:375px){
+#eventos h1{
+    font-size: 3em;
+}
+}
 
 
 /*Projetos*/
@@ -731,6 +758,9 @@ footer a:hover{
     margin: 40px;
     font-size: 3.5em;
 }
+.curso{
+    padding-bottom: 70px;
+}
 .curso h2{
     font-size: 2.5em;
     text-align: center;
@@ -749,8 +779,7 @@ footer a:hover{
 .curso img{
     display: block;
     margin: auto;
-    padding: 20px;
-    width: 25%;
+    max-width: 25%;
 }
 .curso p{
     text-indent: 30px;
@@ -758,4 +787,45 @@ footer a:hover{
     text-align: justify;
     line-height: 30px;
     font-size: 1.1em;
+}
+@media screen and (max-width: 1000px){
+.text{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.curso img{
+    max-width: 30%;
+}
+}
+@media screen and (max-width: 800px){
+.text{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.curso img{
+    max-width: 50%;
+}  
+}
+@media screen and (max-width: 525px){
+.info-cursos h1{
+    font-size: 3em;
+}
+.curso h2{
+    font-size: 2em;
+}
+.curso h3{
+    font-size: 1em;
+}
+.curso p{
+    font-size: 1em;
+}
+.curso ul{
+    font-size: 0.9em;
+}
+
+}
+@media screen and (max-width: 490px){
+.curso img{
+    max-width: 70%;
+}
 }
