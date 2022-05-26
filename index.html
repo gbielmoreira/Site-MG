@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="shortcut icon" href="imagens/logo-mg.jpg" type="image/x-icon">
   <title>EEEP Miguel Gurgel</title>
 </head>
@@ -21,7 +22,7 @@
       <div class="line3"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="index.html" class="item-nav">Início</a></li>
+      <li><a href="#inicio" class="item-nav">Início</a></li>
       <li><a href="#historia" class="item-nav">Sobre</a></li>
       <li><a href="#cursos" class="item-nav">Cursos</a></li>
       <li><a href="#documentacao" class="item-nav">Inscrições</a></li>
@@ -35,6 +36,7 @@
 <main>  
   <!--slides-->
   <div class="slides">
+
     <div class="container-all">
       
       <input type="radio" id="1" name="image-slide" hidden/>
@@ -70,20 +72,20 @@
 
   <!--historia-->
   <div id="historia">
-    <h1>Quem <br> Somos?</h1>
+    <h1 data-aos="fade-down">Quem <br> Somos?</h1>
  
     <section>
-      <div class="text-historia">
+      <div class="text-historia" data-aos="fade-right">
         <h2>Conheça um pouco da nossa historia</h2>
         <p>Lorem ipsam quam fugit. Culpa tempora commodi optio laborum iusto modi corporis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto tenetur ipsum dolores nam modi, reprehenderit, porro iste dolore magnam accusantium autem quod voluptatibus dignissimos ducimus rem sed excepturi ut perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quo totam nam! Consequuntur omnis accusamus aliquam, ad, praesentium quidem inventore amet assumenda libero quos totam, voluptas nam. Ea, commodi Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum nesciunt reiciendis porro nemo voluptatem aliquid, quis excepturi fugiat corrupti laboriosam exercitationem enim modi accusantium commodi, maiores hic molestias libero.</p>
       </div>
-        <img src="imagens/img5-teste.png" alt="">
+        <img src="imagens/img5-teste.png" alt="" data-aos="fade-left">
     </section>
   </div>
 
 
   <!--Cards-->
-  <div id="cursos">
+  <div id="cursos" data-aos="fade-up">
     <div><h1>Cursos</h1></div>
     
     <section>
@@ -110,7 +112,7 @@
           <img src="imagens/mult-logo.png" alt="">
         </div>
         <h2>Multimidia</h2>
-        <p>A multimídia é uma área de formação que prepara profissionais aptos a elaborar e produzir conteúdo envolvendo diversos tipos de mídias e meios diferentes. Esses conteúdos podem ser documentais, artísticos ou publicitários e podem envolver textos, vídeos, áudios, animações e muitos outros tipos de materiais.</p>
+        <p>A multimídia é uma área de formação que prepara profissionais aptos a elaborar e produzir conteúdo envolvendo diversos tipos de mídias e meios diferentes. Esses conteúdos podem ser documentais, artísticos ou publicitários.</p>
         <a href="cursos.html#mult">Mais informações ➜</a>
       </div>
     </section>
@@ -119,7 +121,7 @@
 
 
   <!--Documentação-->
-  <div id="documentacao">
+  <div id="documentacao" data-aos="fade-right">
     <h1>Documentação para inscrições</h1>
     <h2>As inscrições se iniciam no mês de dezembro. Confira a documentação necessaria para participar do processo de seleção: </h2>
     <ul>
@@ -133,7 +135,7 @@
 
 
   <!--Eventos-->
-  <div id="eventos">
+  <div id="eventos" data-aos="fade-right">
       <section>
         <div class="logo-eventos">
           <h1>VENHA<br>SER MG</h1>
@@ -151,7 +153,7 @@
 
   
   <!--Projetos-->
-  <div id="projetos">
+  <div id="projetos" data-aos="fade-down">
     <h1>Projetos</h1>
 
     <div class="cards-projetos">
@@ -221,6 +223,12 @@
 
   <!--Java Script-->
   <script type="text/javascript" src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 600
+    });
+    </script>
 
 </body>
 </html>

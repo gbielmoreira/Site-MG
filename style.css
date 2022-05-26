@@ -4,7 +4,21 @@
     padding: 0px;
     font-family: "Poppins", Helvetica, sans-serif;
 }
-
+:root{
+    --cor1 : #228b22;
+    --cor2 : #fc7d42;
+    --cor3 : #1c701c;
+    --cor4 : #1c701ce3;
+}
+body {
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+:target{
+    scroll-margin-top: 8em;
+}
 
 
 /*header*/
@@ -32,7 +46,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to left, #228b22,  #1c701c);
+    background-image: linear-gradient(to left, var(--cor1),  var(--cor3));
     height: 80px;
 }
 .logo{
@@ -68,9 +82,7 @@ nav {
 }
 
 @media (max-width: 1000px) {
-body {
-    overflow-x: hidden;
-}
+
 nav{
     top: 0;
     width: 100%;
@@ -87,7 +99,7 @@ nav{
     right: 0;
     width: 50vw;
     height: 90vh;
-    background: #1c701ce3;
+    background: var(--cor4);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -147,7 +159,7 @@ transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .linha-horizontal{
-    background-color: #ff8247;
+    background-color: var(--cor2);
     height: 20px;
     box-shadow: 0px 3px 7px  rgba(0, 0, 0, 0.3);
     
@@ -293,7 +305,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     font-size: 2.5em;
     text-align: center;
     text-decoration: underline;
-    color:#ff8247;
+    color:var(--cor2);
     letter-spacing: 3px;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.150);
 }
@@ -367,7 +379,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 
 /*cards*/
 #cursos{
-    background-color: #228b22;
+    background-color: var(--cor1);
     padding: 35px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.322);
 }
@@ -375,12 +387,13 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     letter-spacing: 3px;
     text-align: center;
     color: white;
-    font-size: 2.8em;
+    font-size: 3.5em;
     margin-bottom: 35px;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 #cursos h2{
     font-size: 1.8em;
+    padding-left: 20px;
 }
 #cursos p{
     text-indent: 30px;
@@ -499,7 +512,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 
 /*Venha ser MG*/
 #eventos section{
-    background-color: #ff8247;
+    background-color: var(--cor2);
     height: 300px;
     padding: 30px;
     display: flex;
@@ -546,21 +559,53 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 .imagens-eventos{
     flex-direction: column;
-    margin: auto;
     display: block;
+    margin: auto;
+    max-width:50%;
+}
+}
+@media screen and (max-width:1000px){
+.imagens-eventos{
+    max-width:55%;
+}
+}
+@media screen and (max-width:900px){
+#eventos section{
+    height: 850px;
+}
+}
+@media screen and (max-width:850px){
+.imagens-eventos{
+    max-width:65%;
+}
+#eventos section{
+    height: 900px;
+}
+}
+@media screen and (max-width:750px){
+.imagens-eventos{
+    max-width:70%;
+}
+#eventos section{
+    height: 850px;
+}
+}
+@media screen and (max-width:600px){
+.imagens-eventos{
+    max-width:90%;
 }
 }
 @media screen and (max-width:500px){
+.imagens-eventos{
+    max-width:100%;
+}
 #eventos h1{
     font-size: 4em;
 }
-#eventos section{
-    height: 750px;
 }
-}
-@media screen and (max-width:375px){
-#eventos h1{
-    font-size: 3em;
+@media screen and (max-width:400px){
+.imagens-eventos{
+    max-width:120%;
 }
 }
 
@@ -573,7 +618,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     font-size: 2.5em;
     text-align: center;
     text-decoration: underline;
-    color:#ff8247;
+    color:var(--cor2);
     letter-spacing: 4px;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.150);
 }
@@ -643,7 +688,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     display: flex;
 }
 .esquerda{
-    background-color: #228b22;
+    background-color: var(--cor1);
     color: rgb(241, 241, 241);
     width: 70%;
 }
@@ -660,7 +705,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     padding: 25px 20px 0px 20px;
 }
 .direita{
-    background-color: #fa7233;
+    background-color: var(--cor2);
     color: rgb(241, 241, 241);
     width: 30%;
     padding-bottom: 5px;  

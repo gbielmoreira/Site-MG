@@ -1,0 +1,168 @@
+  <!--slides-->
+  <div class="slides">
+
+    <div class="container-all">
+      
+      <input type="radio" id="1" name="image-slide" hidden/>
+      <input type="radio" id="2" name="image-slide" hidden/>
+      <input type="radio" id="3" name="image-slide" hidden/>
+      <input type="radio" id="4" name="image-slide" hidden/>
+      
+      <div class="slide">
+          <div class="item-slide">
+              <img src="imagens/img1.jpeg">
+          </div>
+          <div class="item-slide">
+              <img src="imagens/img2.jpeg">
+          </div>
+          <div class="item-slide">
+              <img src="imagens/imagen-3.jpg">
+          </div>
+          <div class="item-slide">
+            <img src="imagens/imagen-4.jpg">
+        </div>
+      </div>
+
+      <div class="pagination">
+          <label class="pagination-item" for="1"></label>
+          <label class="pagination-item" for="2"></label>
+          <label class="pagination-item" for="3"></label>
+          <label class="pagination-item" for="4"></label>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+img{
+    max-width: 100%;
+    min-height: 160px;
+    object-fit: cover;
+}
+.slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 1px;
+}
+
+.container-all{
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 700ms;
+    animation-name: autoplay;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 10px;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    background: #fff;
+}
+
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+
+input[id="4"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 3), 0, 0);
+}
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+    background: #fff;
+}
+
+
+@keyframes autoplay{
+    25%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    
+    50%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    
+    75%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+
+    100%{
+        transform: translate3d(calc(-100% * (3)), 0, 0);
+    }
+
+    
+}
+
+
