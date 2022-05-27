@@ -622,8 +622,66 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     max-height: 740px;
 }
 }
+@media screen and (max-width:610px){
+#eventos section{
+    max-height: 700px;
+}
+}
+@media screen and (max-width:590px){
+    #eventos section{
+    max-height: 690px;
+}
+}
+@media screen and (max-width:570px){
+    #eventos section{
+    max-height: 650px;
+}
+}
+@media screen and (max-width:530px){
+    #eventos section{
+    max-height: 630px;
+}
+}
+@media screen and (max-width:510px){
+    #eventos h1{
+    font-size: 3.5em;
+    }
+    #eventos section{
+    max-height: 600px;
+}
+}
+@media screen and (max-width:475px){
+    .imagens-eventos{
+    max-width:80%;
+}
+}
+@media screen and (max-width:430px){
+    .imagens-eventos{
+    max-width:90%;
+}
+}
+@media screen and (max-width:390px){
+    #eventos h1{
+        font-size: 3em;
+    }
+    .imagens-eventos{
+    max-width: 95%;
+}
+}
+@media screen and (max-width:370px){
+    .imagens-eventos{
+    max-width: 100%;
+}
 
-
+}
+@media screen and (max-width:340px){
+    .imagens-eventos{
+    max-width: 100%;
+    }
+    #eventos section{
+    max-height: 600px;
+}
+}
 
 /*Projetos*/
 #projetos{

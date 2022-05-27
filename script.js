@@ -44,8 +44,3 @@ class MobileNavbar {
   );
   mobileNavbar.init();
   
-
-//animações
-AOS.init({
-  duration: 1500
-});
