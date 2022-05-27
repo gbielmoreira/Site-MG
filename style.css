@@ -17,7 +17,7 @@ html{
     scroll-behavior: smooth;
 }
 :target{
-    scroll-margin-top: 8em;
+    scroll-margin-top: 11em;
 }
 
 
@@ -169,7 +169,7 @@ transform: rotate(45deg) translate(-5px, -7px);
 /*slides*/
 img{
     max-width: 100%;
-    min-height: 160px;
+    min-height: 180px;
     object-fit: cover;
 }
 .slides{
@@ -331,7 +331,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     max-width: 28%;
     margin-left: 120px;
 }
-@media (max-width: 1610px) {
+@media screen and (max-width: 1610px) {
 #historia section{
     display: block; 
 }
@@ -348,7 +348,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     margin: auto;
 }
 }
-@media (max-width: 850px) {
+@media screen and (max-width: 850px) {
 #historia img{
     max-width: 60%;
 }
@@ -360,17 +360,17 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     text-align: center;
 }
 }
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
 #historia img{
     max-width: 70%;
 }
 }
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
 #historia img{
     max-width: 80%;
 }
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
 #historia img{
     max-width: 90%;
 }
@@ -392,8 +392,9 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 #cursos h2{
+    letter-spacing: 5px;
     font-size: 1.8em;
-    padding-left: 20px;
+    margin: auto;
 }
 #cursos p{
     text-indent: 30px;
@@ -406,7 +407,6 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     margin: auto;
     max-width: 50%;
     align-items: center;
-    border-radius: 10px;
 }
 #cursos a{
     display: flex;
@@ -444,7 +444,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 #cursos section .card{
     margin: auto;
 }
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
 #cursos section{
     display: block; 
     padding-bottom: 0px;
@@ -454,6 +454,26 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     max-width: 350px;
 }
 }
+@media screen and (max-width: 425px){
+#cursos img{
+    max-width: 80%;
+}
+.card{
+    height: 500px;
+}
+#cursos h2{
+    font-size: 1.3em;
+
+    margin: auto;
+    padding: 0px;
+}
+#cursos p{
+    font-size: 0.9em;
+    padding: 5px;
+    line-height: 18px;
+}
+}
+
 
 /*Documentações*/
 #documentacao{
@@ -559,7 +579,6 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 .imagens-eventos{
     flex-direction: column;
-    display: block;
     margin: auto;
     max-width:50%;
 }
@@ -582,37 +601,33 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     height: 900px;
 }
 }
-@media screen and (max-width:750px){
-.imagens-eventos{
-    max-width:70%;
-}
+@media screen and (max-width:800px){
 #eventos section{
     height: 850px;
 }
 }
-@media screen and (max-width:600px){
-.imagens-eventos{
-    max-width:90%;
-}
-}
-@media screen and (max-width:500px){
-.imagens-eventos{
-    max-width:100%;
-}
+@media screen and (max-width:730px){
 #eventos h1{
     font-size: 4em;
 }
+#eventos section{
+    height: 760px;
 }
-@media screen and (max-width:400px){
+}
+@media screen and (max-width:650px){
 .imagens-eventos{
-    max-width:120%;
+    max-width:70%;
+}
+#eventos section{
+    max-height: 740px;
 }
 }
+
 
 
 /*Projetos*/
 #projetos{
-    padding: 50px;
+    padding: 50px 20px;
 }
 #projetos h1{
     font-size: 2.5em;
@@ -777,9 +792,8 @@ footer a:hover{
 }
 }
 @media screen and (max-width: 480px){
-
 .contatos-escola li:first-child{
-    font-size: 0.77em;
+    font-size: 0.9em;
 }
 .contatos-escola li:last-child{
     font-size: 0.8em;
@@ -789,6 +803,11 @@ footer a:hover{
 }
 .emails{
     font-size: 0.8em;
+}
+}
+@media screen and (max-width: 365px){
+.contatos-escola li:first-child{
+    font-size: 0.77em;
 }
 }
 
