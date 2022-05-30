@@ -169,7 +169,7 @@ transform: rotate(45deg) translate(-5px, -7px);
 /*slides*/
 img{
     max-width: 100%;
-    min-height: 180px;
+    min-height: 120px;
     object-fit: cover;
 }
 .slides{
@@ -186,116 +186,36 @@ img{
     overflow: hidden;
 }
 
-.slide{
+.slide .fot{
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: all 700ms;
     animation-name: autoplay;
-    animation-duration: 8s;
-    animation-direction: alternate;
+    animation-duration: 16s;
+    animation-direction: normal;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+    width: 500%;
 }
 
-.item-slide{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    flex-grow: 0;
-    max-width: 100%;
+.slide .fot img{
+    width: 20%;
 }
-
-.pagination{
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.pagination-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid white;
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.4);
-    margin: 0 10px;
-    transition: all 300ms;
-}
-
-.pagination-item:hover{
-    background: #fff;
-}
-
-
-input[id="1"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(0, 0, 0);
-}
-
-input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
-    background: #fff;
-}
-
-
-input[id="2"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100% * 1), 0, 0);
-}
-
-input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
-    background: #fff;
-}
-
-
-input[id="3"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100% * 2), 0, 0);
-}
-
-input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
-    background: #fff;
-}
-
-
-input[id="4"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100% * 3), 0, 0);
-}
-
-input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
-    background: #fff;
-}
-
 
 @keyframes autoplay{
-    25%{
-        transform: translate3d(calc(-100% * 0), 0, 0);
-    }
-    
-    50%{
-        transform: translate3d(calc(-100% * 1), 0, 0);
-    }
-    
-    75%{
-        transform: translate3d(calc(-100% * 2), 0, 0);
-    }
-
-    100%{
-        transform: translate3d(calc(-100% * (3)), 0, 0);
-    }
-
-    
+    0% { margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+    100% {margin-left: -400%;}
 }
+
+
+
 /*historia*/
 #historia{
     padding: 40px;
@@ -337,6 +257,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 #historia h2{
     text-align: center;
+    
 }
 #historia p{
     margin-left: 20px;
@@ -368,6 +289,11 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 @media screen and (max-width: 450px) {
 #historia img{
     max-width: 80%;
+}
+#historia h2{
+    font-size: 1.6em;
+    letter-spacing: 0px;
+
 }
 }
 @media screen and (max-width: 350px) {
@@ -409,10 +335,13 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     align-items: center;
 }
 #cursos a{
-    display: flex;
-    justify-content: flex-end;
+    padding-left: 160px;
     color: black;
     font-style: italic;
+    text-decoration: none;
+}
+#cursos a:hover{
+    text-decoration: underline;
 }
 .card{
     background-color: white;
@@ -454,6 +383,16 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     max-width: 350px;
 }
 }
+@media screen and (max-width: 460px){
+#cursos a{
+    padding-left: 130px;
+}
+}
+@media screen and (max-width: 435px){
+#cursos a{
+    padding-left: 100px;
+}
+}
 @media screen and (max-width: 425px){
 #cursos img{
     max-width: 80%;
@@ -462,8 +401,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     height: 500px;
 }
 #cursos h2{
-    font-size: 1.3em;
-
+    font-size: 1.1em;
     margin: auto;
     padding: 0px;
 }
@@ -471,6 +409,12 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     font-size: 0.9em;
     padding: 5px;
     line-height: 18px;
+}
+
+}
+@media screen and (max-width: 400px){
+#cursos a{
+    padding-left: 60px;
 }
 }
 
@@ -490,9 +434,9 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 #documentacao ul{
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 80px;
     line-height: 60px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: justify;
 }
 @media screen and (max-width: 1200px){
@@ -516,7 +460,7 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
     padding: 40px;
 }
 #documentacao h1{
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 #documentacao h2{
     font-size: 0.8em;
@@ -628,58 +572,61 @@ input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
 }
 }
 @media screen and (max-width:590px){
-    #eventos section{
+#eventos section{
     max-height: 690px;
 }
 }
 @media screen and (max-width:570px){
-    #eventos section{
+#eventos section{
     max-height: 650px;
 }
 }
 @media screen and (max-width:530px){
-    #eventos section{
+#eventos section{
     max-height: 630px;
 }
 }
 @media screen and (max-width:510px){
-    #eventos h1{
+#eventos h1{
     font-size: 3.5em;
-    }
-    #eventos section{
+}
+#eventos section{
     max-height: 600px;
 }
 }
 @media screen and (max-width:475px){
-    .imagens-eventos{
+.imagens-eventos{
     max-width:80%;
 }
 }
 @media screen and (max-width:430px){
-    .imagens-eventos{
+.imagens-eventos{
     max-width:90%;
 }
 }
 @media screen and (max-width:390px){
-    #eventos h1{
-        font-size: 3em;
-    }
-    .imagens-eventos{
+#eventos h1{
+    font-size: 3em;
+}
+.imagens-eventos{
     max-width: 95%;
+}
+#eventos section{
+    max-height: 550px;
 }
 }
 @media screen and (max-width:370px){
-    .imagens-eventos{
+.imagens-eventos{
     max-width: 100%;
 }
 
 }
 @media screen and (max-width:340px){
-    .imagens-eventos{
+.imagens-eventos{
     max-width: 100%;
-    }
-    #eventos section{
-    max-height: 600px;
+}
+#eventos section{
+    max-height: 500px;
 }
 }
 
