@@ -80,9 +80,7 @@ nav {
     margin: 8px;
     transition: 0.3s;
 }
-
 @media (max-width: 1000px) {
-
 nav{
     top: 0;
     width: 100%;
@@ -169,7 +167,7 @@ transform: rotate(45deg) translate(-5px, -7px);
 /*slides*/
 img{
     max-width: 100%;
-    min-height: 120px;
+    min-height: 130px;
     object-fit: cover;
 }
 .slides{
@@ -178,14 +176,12 @@ img{
     justify-content: center;
     padding: 50px 1px;
 }
-
 .container-all{
     position: relative;
     max-width: 1600px;
     width: 100%;
     overflow: hidden;
 }
-
 .slide .fot{
     display: flex;
     transform: translate3d(0, 0, 0);
@@ -197,11 +193,9 @@ img{
     animation-iteration-count: infinite;
     width: 500%;
 }
-
 .slide .fot img{
     width: 20%;
 }
-
 @keyframes autoplay{
     0% { margin-left: 0;}
     20% {margin-left: 0;}
@@ -213,7 +207,6 @@ img{
     95% {margin-left: -300%;}
     100% {margin-left: -400%;}
 }
-
 
 
 /*historia*/
@@ -246,24 +239,24 @@ img{
     display: flex;
 }
 #historia img{
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 30px;
     max-width: 28%;
     margin-left: 120px;
 }
-@media screen and (max-width: 1610px) {
+@media screen and (max-width: 1755px) {
 #historia section{
     display: block; 
 }
 #historia h2{
     text-align: center;
-    
 }
 #historia p{
     margin-left: 20px;
     margin: auto;
 }
 #historia img{
+    margin-top: 100px;
     max-width: 40%;
     display: block;
     margin: auto;
@@ -293,7 +286,7 @@ img{
 #historia h2{
     font-size: 1.6em;
     letter-spacing: 0px;
-
+    margin: 50px 0px;
 }
 }
 @media screen and (max-width: 350px) {
@@ -353,19 +346,15 @@ img{
     display: flex;
     flex-wrap: wrap;
 }
-
 .ctb:hover{
     box-shadow: 7px 8px 0px 0px rgba(255,178,236,0.81);
 }
-
 .info:hover{
     box-shadow: 7px 8px 0px 0px rgba(204,222,255,0.81);
 }
-
 .mult:hover{
     box-shadow: 7px 8px 0px 0px rgba(183,125,255,0.81);
 }
-
 #cursos section{
     display: flex;
     padding-bottom: 25px;
@@ -410,7 +399,6 @@ img{
     padding: 5px;
     line-height: 18px;
 }
-
 }
 @media screen and (max-width: 400px){
 #cursos a{
@@ -434,10 +422,11 @@ img{
 }
 #documentacao ul{
     margin-top: 30px;
-    margin-left: 80px;
-    line-height: 60px;
-    font-size: 1.2em;
+    margin-left: 60px;
+    line-height: 70px;
+    font-size: 1.3em;
     text-align: justify;
+    max-width: 1650px;
 }
 @media screen and (max-width: 1200px){
 #documentacao h1{
@@ -452,7 +441,6 @@ img{
     margin-left: 0px;
     font-size: 1.1em;
     line-height: 50px;
-
 }
 }
 @media screen and (max-width: 460px){
@@ -469,7 +457,6 @@ img{
 #documentacao ul{
     font-size: 1em;
     line-height: 30px;
-
 }
 }
 
@@ -619,7 +606,6 @@ img{
 .imagens-eventos{
     max-width: 100%;
 }
-
 }
 @media screen and (max-width:340px){
 .imagens-eventos{
@@ -629,6 +615,7 @@ img{
     max-height: 500px;
 }
 }
+
 
 /*Projetos*/
 #projetos{
