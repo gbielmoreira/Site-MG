@@ -1,2 +1,2 @@
 # Site-MG
- Site desenvolvido pra a escola Miguel Gurgel
+ Site desenvolvido para à escola Miguel Gurgel
